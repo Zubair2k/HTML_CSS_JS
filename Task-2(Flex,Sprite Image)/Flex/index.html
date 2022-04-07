@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="/Images/chakra.png">
+    <title>Flex Code</title>
+    <style>
+        *
+        {
+            font-family: 'Times New Roman', Times, serif;
+            box-sizing: border-box;
+        }
+        .nav
+        {
+            background-color: aqua;
+            height: 50px;
+            margin-bottom: 10px;
+            border-radius: 20px;
+
+        }
+        .navbar
+        {
+            background-image: url("Flex_Image/spriteimage.svg");
+            background-position: 0px 51px;
+            width: 200px;
+            height: 50px;
+            float: right;
+            flex: 100%;
+        }
+        .header{
+            background-color: rgb(160, 155, 155);
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+            height: 90px;
+            flex: 100%;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            border-radius: 20px;
+        }
+        .gridtype{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .gridtype1{
+            background-color: rgb(22, 199, 243);
+            text-align: center;
+            padding: 30px;
+            height: 200px;
+            flex: 33%;
+        }
+        .gridtype2{
+            background-color: rgb(224, 152, 17);
+            text-align: center;
+            padding: 30px;
+            height: 200px;
+            flex: 33%;
+        }
+        .gridtype3{
+            background-color: rgb(165, 59, 246);
+            text-align: center;
+            padding: 30px;
+            height: 200px;
+            flex: 33%;
+        }
+        .signup
+        {
+            background-color:red;
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+            height: 200px;
+            flex: 100%;
+        }
+        .content{
+            background-color:green;
+            text-align: center;
+            font-size: 30px;
+            padding: 30px;
+            height: 220px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+        @media screen and (min-width:320px) and (max-width:480px){
+            .gridtype1,.gridtype2,.gridtype3,.signup{
+                flex: 100%;
+            }
+        }
+        
+        @media screen and (min-width:481px) and (max-width:768px){
+            .gridtype1,.gridtype2,.gridtype3{
+                flex: 50%;
+            }
+            .signup{
+                flex: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+        <div class="nav">
+            <div class="navbar"></div>
+        </div>
+        <div class="header">Header</div>
+        <div class="gridtype">
+            <div class="gridtype1">Grid-1</div>
+            <div class="gridtype2">Grid-2</div>
+            <div class="gridtype3">Grid-3</div>
+            <div class="signup">Signup</div>
+        </div>
+        <div class="content">Content</div>
+</body>
+</html>
