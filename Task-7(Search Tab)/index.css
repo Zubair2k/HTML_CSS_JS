@@ -1,0 +1,50 @@
+
+* {
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  
+  body
+  {
+    background-color: rgb(255, 255, 0);
+  }
+
+  #s1 {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+  }
+  #t1 {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #fff;
+    font-size: 18px;
+    background-color: rgb(247, 231, 6);
+  }
+  #t1 th, #t1 td {
+    padding: 12px;
+    text-align: center;
+    align-items: center;
+  }
+  #t1 tr {
+    border-bottom: 1px solid #fff;
+  }
+  
+  #t1 tr.header, #t1 tr:hover {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  td{
+      height: 210px;
+  }
+  .search{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    margin-left:120px;
+  }
