@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <style>
+        h2{
+           
+            margin-top: 60px;
+            text-align: center;
+        }
+        form{
+            
+            background-color: rgb(86, 88, 228);
+            padding: 25px;
+            width: 30%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+<form action="form.html">
+    <h2>Feedback Form</h2>
+    <label for="fname">First name:</label><br>
+    <input type="text" id="fname" name="fname" ><br> <br>
+    <label for="lname">Last name:</label><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+    <label for="email">E-mail:</label><br>
+    <input type="email" id="mail" name="mail" ><br><br>
+    <label for="phonenumber">Mobile Number:</label><br>
+    <input type="tel" id="phonenumber" name="phonenumber" ><br><br>  
+    <label for="gender">Gender:</label><br>  
+    <input type="radio" id="male" name="gender">
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" >
+    <label for="female">Female</label><br>
+    <input type="radio" id="others" name="gender" >
+    <label for="others">Others</label> <br> <br>
+    <label for="feedback">Feedback:</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50">
+    </textarea> <br><br>
+    <h3>Select hobbies : </h3>
+    <input type="checkbox" id="cricket" name="cricket">
+    <label for="cricket"> Cricket</label><br>
+    <input type="checkbox" id="football" name="football" >
+    <label for="football"> Football</label><br>
+    <input type="checkbox" id="games" name="games">
+    <label for="games"> Video games</label><br><br>
+    <label for="rating">Rating (0 to 10):</label>
+    <input type="range" id="rating" name="rating" min="0" max="10"> <br><br>
+    <input type="submit" value="Submit">
+    </form> 
+</body>
+</html>
