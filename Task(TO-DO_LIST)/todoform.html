@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>TO-DO LIST</title>
+    <style>
+      *
+      {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+      
+      body
+      {
+        background: rgb(55,170,235);
+        background: linear-gradient(90deg, rgba(55,170,235,1) 0%, rgba(36,111,238,1) 38%, rgba(0,168,255,1) 100%);
+      }
+
+      header
+      {
+        padding: 15px;
+        height: 50px;
+      }
+
+      #inputtext
+      {
+        width: 300px;
+        height: 20px;
+        margin-top: 20px;
+      }
+      .container
+      {
+        margin-top: 170px;
+        margin-left: 420px;
+        margin-right: 350px;
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 30px;
+        box-shadow: 5px 10px 18px black;
+      }
+
+      .container h2
+      {
+        color: white;
+        text-align: center;
+      }
+
+      #todoContainer p
+      {
+        color: white;
+      }
+
+      button
+      {
+        border-radius: 6px; 
+        background-color: black; 
+        color: white; 
+        cursor: pointer;
+      }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+      <h2>TO-DO LIST</h2>
+      <hr>
+      <input id="inputtext" type="text" placeholder="Enter To-Do List">
+      <button id="addtodo">+</button>
+      <button id="clrall">Clear All</button>
+      <button id="save">Save</button>
+      <button id="savelst">Saved List</button>
+      <button id="clr">Clear</button>
+      <div class="todo" id="todoContainer">
+      </div>
+    </div>
+    <script src="todoform.js"></script>
+</body>
+</html>
