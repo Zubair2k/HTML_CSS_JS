@@ -12,7 +12,7 @@ function onFeedbackSubmit() {
 }
 
 function validate() {
-    isValid = true;
+    var isValid = true;
     if (document.getElementById("feedback").value == ""){
         isValid = false;
         document.getElementById("feedbackValidationError").classList.remove("hide");
@@ -38,15 +38,15 @@ function readData() {
 function insertRecord(data1) {
     var table = document.getElementById("feedbackdetails").getElementsByTagName('tbody')[0];
     var newRow = table.insertRow(table.length);
-    cell1 = newRow.insertCell(0);
+    var cell1 = newRow.insertCell(0);
     cell1.innerHTML = data1.fname;
-    cell2 = newRow.insertCell(1);
+    var cell2 = newRow.insertCell(1);
     cell2.innerHTML = data1.lname;
-    cell3 = newRow.insertCell(2);
+    var cell3 = newRow.insertCell(2);
     cell3.innerHTML = data1.mail;
-    cell4 = newRow.insertCell(3);
+    var cell4 = newRow.insertCell(3);
     cell4.innerHTML = data1.phonenumber;
-    cell5 = newRow.insertCell(4);
+    var cell5 = newRow.insertCell(4);
     cell5.innerHTML = data1.feedback;
     cell5 = newRow.insertCell(5);
     cell5.innerHTML = `<a onClick="onEdit(this)">Edit</a>
@@ -81,7 +81,7 @@ function onEdit(td) {
 
 function onDelete(td) {
     if (confirm('Want to delete this record ?')) {
-        row = td.parentElement.parentElement;
+        var row = td.parentElement.parentElement;
         document.getElementById("feedbackdetails").deleteRow(row.rowIndex);
         resetValueForm();
     }
