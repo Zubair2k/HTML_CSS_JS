@@ -1,0 +1,58 @@
+
+   
+<!DOCTYPE html>
+<html>
+<head>
+<title>Display Information</title>
+<style>
+    body
+    {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background: rgb(50,207,171);
+        background: linear-gradient(90deg, rgba(50,207,171,1) 0%, rgba(6,200,119,1) 33%, rgba(0,255,205,1) 100%);
+    }
+
+    header
+    {
+        text-align: center;
+        color: #ffffff;
+    }
+
+    #Photo{
+        margin-left: 550px;
+        margin-top: 100px;
+        border-radius: 5px;
+    }    
+    .det{
+        margin-left: 610px;
+    }
+</style>
+</head>
+<body>
+<header><h1>PRODUCT MODEL DETAILS</h1></header>
+<hr>
+<img id="Photo" src="" alt="Profile-image" width="300px" height="300px">
+</body>
+</html>
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+const recentImageDataUrl=localStorage.getItem("recent-image");
+if(recentImageDataUrl)
+{
+document.querySelector("#Photo").setAttribute("src",recentImageDataUrl); 
+console.log(localStorage.getItem("jsons"));
+}
+});
+let newObject = window.localStorage.getItem("myObject");
+var obj=JSON.parse(newObject); 
+for (var key in obj) {
+if (obj.hasOwnProperty(key)) {
+var tag = document.createElement("p");
+tag.setAttribute("class","det") ;
+  var text = document.createTextNode(key + " : " + obj[key]); 
+  tag.appendChild(text); 
+  var element = document.getElementsByTagName("body")[0];
+  element.appendChild(tag);
+}
+}
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Product Model Display</title>
+<style>
+  body
+  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background: rgb(24,158,171);
+    background: linear-gradient(90deg, rgba(24,158,171,1) 0%, rgba(15,160,190,1) 33%, rgba(0,212,255,1) 100%);
+  }
+
+  header 
+  {
+    text-align: center;  
+    color: white;
+  }
+
+  form 
+  {
+    border: 2px solid black;
+    padding: 30px;
+    margin-left: 550px;
+    margin-top: 200px;
+    margin-right: 500px;
+    border-radius: 5px;
+  }
+  #submit
+  {
+    margin-left:130px; 
+    padding: 5px; 
+    border-radius: 6px; 
+    background-color: red; 
+    color: white; 
+    cursor: pointer;
+  }
+
+</style>
+</head>
+<body>
+  <header><h1>PRODUCT MODEL DISPLAY</h1><hr>
+  </header>
+  <form method="post" action="display.html" target="_blank">
+    <label>Upload The Image of the Product : </label>
+    <br><br>
+    <input type="file" accept="image/*" name="image" id="image" required />
+    <br><br>
+    <label>Upload The Details of the Product : </label>
+    <br><br>
+    <input type="file" id="jsonfile" accept=".json" required />
+    <br><br>
+    <input type="submit" id="submit">
+  </form>
+  <script>
+    document.querySelector("#image").addEventListener("change",function(){
+      const imagefile=new FileReader();
+      imagefile.addEventListener("load",()=>{
+        localStorage.setItem("recent-image", imagefile.result);
+        console.log(imagefile.result);
+      }); 
+      imagefile.readAsDataURL(this.files[0]);
+    });
+    document.getElementById("jsonfile").addEventListener("change", function() {
+      var jsontype = document.getElementById("jsonfile").files[0];
+      var jsontypefile = new FileReader();
+      jsontypefile.onload = function(e) {
+        var content = e.target.result;
+        var data = JSON.parse(content); 
+        window.localStorage.setItem("myObject", JSON.stringify(data));
+      };
+      jsontypefile.readAsText(jsontype);  
+    });
+  </script>
+</body>
+</html>
