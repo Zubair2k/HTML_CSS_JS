@@ -32,7 +32,7 @@ save.addEventListener('click',function(){
 })
 
 savelst.addEventListener('click',function(){
-    var savelst=localStorage.getItem('savebtn');;
+    var savelst=localStorage.getItem('savebtn');
     document.getElementById('todoContainer').innerHTML= savelst;
 
 })
