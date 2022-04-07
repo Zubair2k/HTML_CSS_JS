@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>FAQ</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>FREQUENTLY ASKED QUESTIONS</header>
+        <div class="contentBox">
+            <div class="label">What is Web Development?</div>
+            <div class="content">
+                <p>Web development refers to the building, creating, and maintaining of websites.
+                It includes aspects such as web design, web publishing, web programming, and database management.
+                It is the creation of an application that works over the internet i.e. Websites.
+
+                </p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">What is HTML?</div>
+            <div class="content">
+                <p>HTML stands for HyperText Markup Language. It is used to design the front end portion of web pages using markup language.
+                It acts as a skeleton for a website since it is used to make the structure of a website.Hypertext defines the link between the web pages.
+                A markup language is used to define the text document within tag which defines the structure of web pages.
+                </p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">What is CSS?</div>
+            <div class="content">
+                <p>CSS (Cascading Style Sheets) is a stylesheet language used to design the webpage to make it attractive.
+                The reason for using this is to simplify the process of making web pages presentable. It allows you to apply styles to web pages.
+                More importantly, it enables you to do this independent of the HTML that makes up each web page.
+                </p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">What is Javascript?</div>
+            <div class="content">
+                <p>JavaScript is the world most popular lightweight, interpreted compiled programming language.
+                It is also known as scripting language for web pages.It is well-known for the development of web pages, many non-browser environments also use it.
+                JavaScript can be used for Client-side developments as well as Server-side developments.
+                </p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">What is HTTP?</div>
+            <div class="content">
+                <p>The Hypertext Transfer Protocol (HTTP) is application-level protocol for collaborative, distributed, hypermedia information systems.
+                It is the data communication protocol used to establish communication between client and server.
+                </p>
+            </div>
+        </div>
+
+        <div class="contentBox">
+            <div class="label">What is CORS?</div>
+            <div class="content">
+                <p>Cross-Origin Resource Sharing (CORS) is defined as the browser mechanism that involves controlled resources access granted outside the given domain. It can enable a web page to access the resource with a different domain.
+                It is a relaxation of some policies associated with browsers implemented on the same origin.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const col=document.getElementsByClassName('contentBox');
+        
+        for(i=0;i<col.length;i++)
+        {
+            col[i].addEventListener('click',function(){
+                this.classList.toggle('active')
+            })
+        }
+    
+    </script>
+</body>
+</html>
