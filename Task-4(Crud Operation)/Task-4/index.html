@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Feedback Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<form onsubmit="event.preventDefault();onFeedbackSubmit();" autocomplete="off">
+    <h2>Feedback Form</h2>
+    <div>
+    <label for="fname">First name</label><br>
+    <input type="text" id="fname" name="fname" ><br> <br>
+    </div>
+
+    <div>
+    <label for="lname">Last name</label><br>
+    <input type="text" id="lname" name="lname" ><br><br>
+    </div>
+
+    <div>
+    <label for="email">Email</label><br>
+    <input type="email" id="mail" name="mail" ><br><br>
+    </div>
+
+    <div>
+    <label for="phonenumber">Mobile Number</label><br>
+    <input type="tel" id="phonenumber" name="phonenumber" ><br><br>  
+    </div>
+    
+    <label for="feedback">Feedback *</label><label class="validation-error hide" id="feedbackValidationError">This field is required.</label><br>
+    <textarea id="feedback" name="feedback" rows="4" cols="50">
+    </textarea> <br><br>
+   
+    <div class="form-button">
+        <input type="submit" value="SUBMIT" id="Submit">
+    </div>
+
+</form> 
+    
+    <table class="displaydata" id="feedbackdetails">
+        <thead>
+            <tr>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Mobile Number</th>
+                <th>Feedback</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script src="index.js"></script>
+</body>
+</html>
